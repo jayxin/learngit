@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>d</title>
+		<style>
+			#wrapper {
+				width : 100px;
+				height : 100px;
+				background : skyblue;
+			}
+		</style>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<div id="wrapper"></div>
+		<button id="btn1">显示</button>
+		<button id="btn2">隐藏</button>
+		<script type="text/javascript">
+			$(function () {
+				$("#btn1").click(function () {
+					//$("#wrapper").animate({opacity:1});
+					$("#wrapper").fadeIn(1000);
+				});
+				$("#btn2").click(function () {
+					//$("#wrapper").animate({opacity:0});
+					//参数1:执行动画的时间，默认是400ms
+					//参数2:动画执行完毕的回调函数
+					$("#wrapper").fadeOut(1000);
+				});
+			});
+		</script>
+	</body>
+</html>
